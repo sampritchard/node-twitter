@@ -8,7 +8,7 @@ describe('User going to the messages page', () => {
   const browser = new Browser();
 
   before(() => {
-    return browser.visit('/messages');
+    return browser.visit('/messages/new');
   })
 
   describe('Messages page can be seen', () => {
@@ -17,7 +17,7 @@ describe('User going to the messages page', () => {
     })
 
     it('should return the heading of messages', () => {
-      browser.assert.text('p', 'See All Messages!')
+      browser.assert.text('p', 'New Message!')
     })
   })
 

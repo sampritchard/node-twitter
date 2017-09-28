@@ -1,25 +1,22 @@
 const Koa = require('koa');
 const mongoose = require('mongoose');
 const Router = require('koa-router');
-const render = require('koa-ejs');
-const path = require('path');
 const app = new Koa();
 const router = new Router();
 
-render(app, {
-  root: path.join(__dirname, 'views'),
-  layout: 'messages',
-  viewExt: 'html',
-})
+const Pug = require('koa-pug')
+const pug = new Pug({
+  viewPath: './views',
+  basedir: './views',
+  app: app
+});
 
-app.use(async (ctx) => {
-  await ctx.render('messages')
-})
+const messagesRouter = require('./routes/messages')
+const indexController = require('./routes/index')
 
-const getMessages = require('./routes/messages')
-
-router.use('/messages', getMessages.routes());
-app.use(router.routes())
+router.use('/messages', messagesRouter.routes());
+router.use('/', indexController.routes())
+app.use(router.routes());
 
 require('dotenv').config();
 

@@ -1,5 +1,7 @@
-const render = require('koa-views-render');
+exports.newMessages = (ctx) => {
+  ctx.render('newmessage')
+}
 
 exports.getMessages = (ctx) => {
-  app.use(render('messages'));
+  ctx.render('messages')
 }

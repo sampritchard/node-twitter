@@ -21,13 +21,10 @@
     "assert": "^1.4.1",
     "dotenv": "^4.0.0",
     "koa": "^2.3.0",
-    "koa-ejs": "^4.1.0",
-    "koa-render": "^0.2.1",
+    "koa-pug": "^3.0.0-2",
     "koa-router": "^7.2.1",
-    "koa-views-render": "0.0.1",
     "mocha": "^3.5.3",
     "mongoose": "^4.11.13",
-    "path": "^0.12.7",
     "zombie": "^5.0.7"
   }
 }

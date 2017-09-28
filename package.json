@@ -1,0 +1,28 @@
+{
+  "name": "nodetwitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "env NODE_ENV=development node app.js",
+    "test": "env NODE_ENV=test mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sampritchard/node-twitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sampritchard/node-twitter/issues"
+  },
+  "homepage": "https://github.com/sampritchard/node-twitter#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "dotenv": "^4.0.0",
+    "koa": "^2.3.0",
+    "mocha": "^3.5.3",
+    "mongoose": "^4.11.13",
+    "zombie": "^5.0.7"
+  }
+}

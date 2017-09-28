@@ -19,6 +19,10 @@ describe('User going to the messages page', () => {
     it('should return the heading of messages', () => {
       browser.assert.text('h1', 'Messages')
     })
+
+    it('expects to see a list of saved messages', () => {
+      browser.assert.text('.messages', 'Hello!')
+    })
   })
 
 })

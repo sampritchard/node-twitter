@@ -1,6 +1,4 @@
-doctype html
-html
-    head
-        title="Hello Pug"
-    body
-        p.greetings#people New Message!
+form(action="/messages/new" method="POST")
+  label(for="message") Message  
+  textarea(name="message")
+  input(type="submit" value="Save")

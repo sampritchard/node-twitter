@@ -1,24 +1,38 @@
 const Browser = require('zombie');
 var app = require('../app');
 var assert = require('assert');
+const mongoose = require('mongoose');
+const Message = mongoose.model('Message');
 
 Browser.localhost('localhost', 3000);
 
-describe('User going to the messages page', () => {
-  const browser = new Browser();
+  describe('User visits the new message page', function() {
+    const browser = new Browser();
 
-  before(() => {
-    return browser.visit('/messages/new');
+    before((done) =>  {
+      mongoose.connection.db.dropDatabase(() => {
+        done();
+      });
+    });
+
+    before(function() {
+      return browser.visit('/messages/new');
+    });
+
+    describe('sees the new message page', function() {
+
+      it('should be successful', function() {
+        browser.assert.success();
+      });
+
+      it('should see a new message form', function() {
+        browser.assert.element('form');
+      });
+
+      it('creates a new message', async() => {
+        const message = await new Message({
+          message: 'Hello!'
+        }).save()
+      })
+    });
   })
-
-  describe('Messages page can be seen', () => {
-    it('should be successful', () => {
-      browser.assert.success();
-    })
-
-    it('should return the heading of messages', () => {
-      browser.assert.text('p', 'New Message!')
-    })
-  })
-
-})

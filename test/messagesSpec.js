@@ -17,7 +17,7 @@ describe('User going to the messages page', () => {
     })
 
     it('should return the heading of messages', () => {
-      browser.assert.text('p', 'See All Messages!')
+      browser.assert.text('h1', 'Messages')
     })
   })
 

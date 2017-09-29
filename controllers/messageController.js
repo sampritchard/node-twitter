@@ -7,7 +7,7 @@ exports.newMessages = (ctx) => {
 
 exports.createMessage = async (ctx, next) => {
   const message = Message({
-    message: 'Need to get the message from view here'
+    message: 'Bug'
   });
   await message.save();
   ctx.redirect('/messages')

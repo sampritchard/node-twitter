@@ -1,8 +1,9 @@
 h1 Messages
-    
+      
 p
   a(href="/messages/new") New Message
   
 .messages
   each message in messages
-    <br /> #{message.message}
+    p
+      <br /> #{message.message} Like?<input type="checkbox" name="agreement" /> Dislike?<input type="checkbox" name="agreement" />

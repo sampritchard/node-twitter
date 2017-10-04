@@ -1,4 +1,4 @@
-# MESSAGE BOARD PROJECT
+# MESSAGE BOARD PROJECT - Koa attempted...
 
 The task: Build an anonymous message board on Node on the backend, with a simple front-end.
 

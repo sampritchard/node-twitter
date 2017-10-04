@@ -21,7 +21,7 @@ describe('User going to the messages page', () => {
     })
 
     it('expects to see a list of saved messages', () => {
-      browser.assert.text('.messages', 'Hello!')
+      browser.assert.text('.messages', 'Hello! Like? Dislike?')
     })
   })
 

@@ -6,8 +6,9 @@ exports.newMessages = (ctx) => {
 }
 
 exports.createMessage = async (ctx, next) => {
+  console.log(ctx.body)
   const message = Message({
-    message: 'Bug'
+    message: 'Bug2'
   });
   await message.save();
   ctx.redirect('/messages')

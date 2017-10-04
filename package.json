@@ -23,7 +23,6 @@
     "dotenv": "^4.0.0",
     "koa": "^2.3.0",
     "koa-body": "^2.4.0",
-    "koa-bodyparser": "^4.2.0",
     "koa-pug": "^3.0.0-2",
     "koa-router": "^7.2.1",
     "koa-views": "^6.1.0",

@@ -36,6 +36,3 @@ app.use(bodyParser({
   multipart: true,
   urlencoded: true
 }));
-
-module.exports = app;
-module.exports = mongoose;
